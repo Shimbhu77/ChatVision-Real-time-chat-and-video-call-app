@@ -1,0 +1,106 @@
+  
+Q1) The set of positive numbers starting from 1 is known as Natural Numbers. The sum of
+the first N natural numbers is given by the formula [N * (N + 1)] / 2 For example, given a
+number 5, the sum of the first 5 natural numbers will be[5 * (6)]/2 = 15
+● Write a Java class with a static method that will take a number as a parameter, and print the
+sum of the natural number from 1 to the number supplied as the method argument.
+● Call the above-defined method from the main method of that class by supplying any number
+as an argument and print the result.
+
+Answer.
+
+
+package com.ana;
+
+public class Sum {
+
+	public static int SumOf(int x)
+	{
+		int y=x*(x+1)/2;
+		return y;
+		
+	}
+	public static void main(String[] args) {
+       int n=6;
+       int z=SumOf(n);
+       System.out.println(z);
+	}
+
+}
+
+
+Q2) The prime factors of a number are all of the integers below that number that are
+divisible into the number as well as 1. For example, the prime factors of 12 are 1,2,3,4,6,
+and 12.
+● Write a Java class with a static method that will take a number and print all the prime factorial
+of that number.
+● The Supplied number should be between 2 and 100. otherwise, it should print “Invalid
+number”.
+● Call this method from the main method by supplying any valid argument.
+
+Answer.
+
+package com.ana;
+
+public class Prime {
+
+	public static int PrimeOf(int x)
+	{
+          for(int i=1;i<x;i++)
+          {
+             if(x%i==0)
+             {
+               System.out.println(i);
+             }
+          }
+      	  
+	}
+	public static void main(String[] args) {
+        int n=12;
+        PrimeOf(n);
+       
+	}
+
+}
+
+
+
+Q3) Define Wrapper Classes in Java.
+Answer.
+      Classes representation of primitive data types are called as Wrapper Classes.
+      like-   byte : java.lang.Byte
+      To identify "min value" and "max value" for each and every data type, JAVA has provided
+      the following two constant variables from all the wrapper classes.
+      MIN_VALUE and MAX_VALUE;
+     
+public class Main {
+public static void main(String[] args) {
+
+     System.out.println(Byte.MIN_VALUE+"  "+Byte.MAX_VALUE);
+   }
+}
+
+
+
+Q4) Explain why the following block of code will give a compile time error?
+public class Main {
+public static void main(String[] args) {
+float f=3.3;
+System.out.println(f);
+}
+}
+Also rectify this code.
+
+
+Answer.
+
+   we are converting double to float so that is given compile time error because double is higher data type then float data type so we can convert it using explicit typecasting.
+
+Modified code :
+
+public class Main {
+public static void main(String[] args) {
+float f=3.3f;
+System.out.println(f);
+}
+}
