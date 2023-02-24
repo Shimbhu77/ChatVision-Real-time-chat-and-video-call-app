@@ -32,16 +32,16 @@ public class JwtTokenGeneratorFilter extends OncePerRequestFilter {
 		System.out.println(authentication.toString());
 		
 		System.out.println("==========================");
+		
 		System.out.println("==========================");
-		System.out.println("==========================");
-		System.out.println("==========================");
-		System.out.println("==========================");
-		System.out.println("==========================");
+		
 		System.out.println("==========================");
 		
 		if(authentication != null)
 		{
 			SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes());
+			
+			System.out.println("secret key : "+key);
 			
 			String jwt = Jwts.builder()
 					.setIssuer("Shimbhu77")
@@ -50,8 +50,9 @@ public class JwtTokenGeneratorFilter extends OncePerRequestFilter {
 					.claim("role", populateAuthorities(authentication.getAuthorities()))
 					.setIssuedAt(new Date())
 					.setExpiration(new Date(new Date().getTime()+30000000))
-					.signWith(key,SignatureAlgorithm.HS256).compact();
-			 response.setHeader(SecurityConstants.JWT_HEADER, jwt);
+					.signWith(key).compact();
+			
+			 response.setHeader(SecurityConstants.JWT_HEADER,"Bearer " + jwt);
 		}
 		
 		 filterChain.doFilter(request, response);
