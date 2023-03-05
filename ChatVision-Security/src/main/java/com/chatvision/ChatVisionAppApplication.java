@@ -7,10 +7,10 @@ import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 
 @SpringBootApplication
 @OpenAPIDefinition
-public class ChatVisionSecurityApplication {
+public class ChatVisionAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ChatVisionSecurityApplication.class, args);
+		SpringApplication.run(ChatVisionAppApplication.class, args);
 	}
 
 }
