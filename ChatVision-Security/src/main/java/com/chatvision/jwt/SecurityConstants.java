@@ -1,4 +1,4 @@
-package com.chatvision.security;
+package com.chatvision.jwt;
 
 public interface SecurityConstants {
 

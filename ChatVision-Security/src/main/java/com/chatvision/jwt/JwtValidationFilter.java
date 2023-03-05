@@ -1,4 +1,4 @@
-package com.chatvision.security;
+package com.chatvision.jwt;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,57 +23,68 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class JwtTokenValidatorFilter  extends OncePerRequestFilter{
+public class JwtValidationFilter extends OncePerRequestFilter {
 
 	@Override
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
+	
 		
-		String jwt = request.getHeader(SecurityConstants.JWT_HEADER);
-		System.out.println("****************");
-		System.out.println("****************");
-		System.out.println("****************");
-		System.out.println("****************");
-		System.out.println("****************");
-			System.out.println(jwt);
-		if(jwt!=null)
-		{
-			
-			try 
-			{
+		String jwt= request.getHeader(SecurityConstants.JWT_HEADER);
+
+		
+		if(jwt != null) {
+						
+			try {
+
+				//extracting the word Bearer
 				jwt = jwt.substring(7);
+
 				
-				SecretKey key = Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes());
+				SecretKey key= Keys.hmacShaKeyFor(SecurityConstants.JWT_KEY.getBytes());
 				
-				Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jwt).getBody();
 				
-				String username = String.valueOf(claims.get("username"));
+
+				Claims claims= Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jwt).getBody();
 				
-//				String authorities = (String)(claims.get("authorities"));
-                String role= (String)claims.get("role");
+				
+				String username= String.valueOf(claims.get("username"));
+				
+				
+				String role= (String)claims.get("role");
 				
 				List<GrantedAuthority> authorities = new ArrayList<>();
 				authorities.add(new SimpleGrantedAuthority(role));
 				
-//				Authentication auth = new UsernamePasswordAuthenticationToken(username,null, AuthorityUtils.commaSeparatedStringToAuthorityList(authorities));
-				Authentication auth = new UsernamePasswordAuthenticationToken(username,null, authorities);
+				Authentication auth = new UsernamePasswordAuthenticationToken(username, null, authorities);
+
+				
+				 
+				
 				
 				SecurityContextHolder.getContext().setAuthentication(auth);
-			
+				
 			} catch (Exception e) {
-				throw new BadCredentialsException("Invalid jwt token recieved ");
+				throw new BadCredentialsException("Invalid Token received..");
 			}
+			
+			
 			
 		}
 		
 		filterChain.doFilter(request, response);
 		
+		
 	}
+	
+	
+	
+	//this time this validation filter has to be executed for all the apis except the /login api
 	
 	@Override
 	protected boolean shouldNotFilter(HttpServletRequest request) throws ServletException {
-		
-		return request.getServletPath().equals("/SignIn");
+	
+		return request.getServletPath().equals("/signIn");
 	}
 
 }

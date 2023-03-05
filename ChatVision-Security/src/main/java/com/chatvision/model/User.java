@@ -8,9 +8,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @Entity
 @NoArgsConstructor
-@Data
 @AllArgsConstructor
 public class User {
 
@@ -18,10 +18,6 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private String name;
-	private String gender;
-	private String role;
-	
 	private String password;
-	
+	private String role;
 }
-

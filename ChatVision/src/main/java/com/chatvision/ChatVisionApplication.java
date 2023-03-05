@@ -12,7 +12,7 @@ import io.swagger.v3.oas.annotations.security.SecuritySchemes;
 import io.swagger.v3.oas.annotations.servers.Server;
 
 @SpringBootApplication
-//@OpenAPIDefinition(info = @Info(title = "REST API", version = "1.1"),
+@OpenAPIDefinition(//info = @Info(title = "REST API", version = "1.1")
 //security = {
 //			@SecurityRequirement(name = "basicAuth"), 
 //			@SecurityRequirement(name = "bearerToken")
@@ -24,7 +24,8 @@ import io.swagger.v3.oas.annotations.servers.Server;
 //@SecuritySchemes({
 //@SecurityScheme(name = "basicAuth", type = SecuritySchemeType.HTTP, scheme = "basic"),
 //@SecurityScheme(name = "bearerToken", type = SecuritySchemeType.HTTP, scheme = "bearer", bearerFormat = "JWT")
-//})
+//}
+)
 public class ChatVisionApplication {
 
 	public static void main(String[] args) {
