@@ -1,4 +1,12 @@
 # ChatVision-Real-time-chat-and-video-call-app
 # One to One chat and Group Chat Using WebSocket and Stomp.Js
 ### It will work like whatsapp which is capable to handle live chat for large audience
+#Skills
+- Java
+- Spring Boot
+- Jwt Token Authentication
+- Spring Security
+- MySQL
+- Hibernate
+- REST API
 
