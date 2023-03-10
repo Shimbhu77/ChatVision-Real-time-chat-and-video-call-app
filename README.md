@@ -13,5 +13,7 @@
 - One to One chat
 - Group Chat
 - Audio Calls 
-- Video Calls
+- Video Call
+- One to One video calls
+- Group video calls
 
