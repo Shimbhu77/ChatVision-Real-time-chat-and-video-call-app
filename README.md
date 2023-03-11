@@ -16,4 +16,5 @@
 - Video Call
 - One to One video calls
 - Group video calls
-
+- Message Editing and delete
+- Online, Offline (Last Seen), Typing Of User 
