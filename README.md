@@ -9,6 +9,7 @@
 - MySQL
 - Hibernate
 - REST API
+
 # Features
 - One to One chat
 - Group Chat
@@ -16,5 +17,6 @@
 - Video Call
 - One to One video calls
 - Group video calls
+- One to One audio calls
 - Message Editing and delete
 - Online, Offline (Last Seen), Typing Of User 
