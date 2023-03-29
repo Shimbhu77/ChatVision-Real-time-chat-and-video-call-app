@@ -19,15 +19,6 @@ public class SecurityConfig {
 	@Bean
     SecurityFilterChain mySecurity(HttpSecurity http) throws Exception
 	{
-//		http.
-//		sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-//		.and().
-//		authorizeHttpRequests((auth) -> 
-//		auth.requestMatchers("/app/**").permitAll()
-//		.requestMatchers("/login/**").authenticated()
-//		.requestMatchers("/swagger-ui/**","/v3/api-docs/**").permitAll()
-//		).csrf().disable()
-//		.addFilter(null).httpBasic(); 
 		
 		http
 		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)

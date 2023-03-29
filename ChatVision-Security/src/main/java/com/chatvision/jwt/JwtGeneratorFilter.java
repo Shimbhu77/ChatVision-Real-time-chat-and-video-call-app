@@ -43,7 +43,7 @@ public class JwtGeneratorFilter extends OncePerRequestFilter {
                     .claim("username", authentication.getName())
                     .claim("role",getRole(authentication.getAuthorities()))
                     .setIssuedAt(new Date())
-                    .setExpiration(new Date(new Date().getTime()+ 30000000)) // expiration time of 8 hours
+                    .setExpiration(new Date(new Date().getTime()+ 30000000)) // expiration time of 24 hour
                     .signWith(key).compact();
             
             response.setHeader(SecurityConstants.JWT_HEADER, jwt);

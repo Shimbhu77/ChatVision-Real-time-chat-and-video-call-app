@@ -1,4 +1,4 @@
-package com.chatvision.service;
+package com.chatvision.serviceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.chatvision.model.User;
 import com.chatvision.repo.UserRepo;
+import com.chatvision.service.UserService;
 
 @Service
 public class UserServiceImpl  implements UserService{
@@ -33,6 +34,20 @@ public class UserServiceImpl  implements UserService{
 		User user = userRepo.findByName(userName);
 		
 		return user.toString();
+		
+	}
+	
+	public User getLoginUser() {
+			
+		SecurityContext sc  = SecurityContextHolder.getContext();
+		
+		Authentication auth  = sc.getAuthentication();
+		
+		String userName = auth.getName();
+		
+		User user = userRepo.findByName(userName);
+		
+		return user;
 		
 	}
 

@@ -20,8 +20,11 @@ public class LoginController {
 	@GetMapping("/signIn")
 	public ResponseEntity<User> getLoggedInCustomerDetailsHandler(Authentication auth) throws BadCredentialsException{
 		
+		System.out.println("doing sign in process...");
 		
 		User customer= userRepo.findByName(auth.getName()) ; //.orElseThrow(() -> new BadCredentialsException("Invalid Username or password"));
+		
+		System.out.println("doing sign in process...");
 		
 		if(customer!=null)
 		{
