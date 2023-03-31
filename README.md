@@ -20,5 +20,5 @@
 - One to One audio calls
 - Message Editing and delete
 - Online, Offline (Last Seen), Typing Of User 
-- Add Status
+- Add multiple Status 
                              
