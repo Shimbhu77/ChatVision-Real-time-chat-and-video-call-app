@@ -6,7 +6,7 @@
 - Spring Boot
 - Jwt Token Authentication
 - Spring Security
-- MySQL
+- MySQL                   
 - Hibernate
 - REST API
 
