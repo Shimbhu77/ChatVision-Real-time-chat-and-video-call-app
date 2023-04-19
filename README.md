@@ -9,6 +9,7 @@
 - MySQL                   
 - Hibernate
 - REST API
+- BootStrap
 
 # Features
 - One to One chat
