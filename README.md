@@ -10,6 +10,8 @@
 - Hibernate
 - REST API
 - BootStrap
+- HTML
+- CSS
 
 # Features
 - One to One chat
