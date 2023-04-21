@@ -12,6 +12,7 @@
 - BootStrap
 - HTML
 - CSS
+- React Js
 
 # Features
 - One to One chat
