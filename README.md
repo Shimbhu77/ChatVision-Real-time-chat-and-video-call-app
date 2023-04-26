@@ -4,7 +4,6 @@
 # Skills
 
 # Backend Tech Stack
-
 - Java
 - Spring Boot
 - Jwt Token Authentication
@@ -14,7 +13,6 @@
 - REST API
 
 # Fronted Tech Stack 
-
 - BootStrap
 - HTML
 - CSS
