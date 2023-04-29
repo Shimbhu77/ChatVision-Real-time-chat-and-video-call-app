@@ -2,7 +2,7 @@
 ## One to One chat and Group Chat Using WebSocket and Stomp.Js  
 ### It will work like whatsapp which is capable to handle live chat and video call feature .
 # Skills
-
+                                   
 # Backend Tech Stack
 - Java
 - Spring Boot
