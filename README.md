@@ -28,6 +28,6 @@
 - Message Editing and delete
 - Online, Offline (Last Seen), Typing Of User 
 - Add multiple status   
-- Group Admin Access              
+- Group Admin Access                       
                              
   
