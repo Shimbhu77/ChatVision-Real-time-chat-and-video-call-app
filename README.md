@@ -10,7 +10,6 @@
 - MySQL                   
 - Hibernate
 - REST API
-
 # Fronted Tech Stack 
 - BootStrap
 - HTML
