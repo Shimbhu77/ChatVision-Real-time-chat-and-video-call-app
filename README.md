@@ -15,6 +15,7 @@
 - HTML
 - CSS
 - React Js
+- UI
 
 # Features
 - One to One chat
