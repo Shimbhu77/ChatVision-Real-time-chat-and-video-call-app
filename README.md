@@ -1,5 +1,5 @@
 ## ChatVision-Real-time-chat-and-video-call-app          
-## One to One chat and Group Chat Using WebSocket and Stomp.Js  
+## One to One chat and Group Chat Using WebSocket and Stomp.Js  comming soon
 ### It will work like whatsapp which is capable to handle live chat and video call feature .
 # Skills       
 # Backend Tech Stack
@@ -16,7 +16,6 @@
 - CSS
 - React Js
 - UI Library
-
 # Features
 - One to One chat
 - Group Chat
