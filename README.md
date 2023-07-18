@@ -15,7 +15,7 @@
 - HTML
 - CSS
 - React Js
-- UI Library
+- UI Library Like Tailwind CSS, MUI
 # Features
 - One to One chat
 - Group Chat
